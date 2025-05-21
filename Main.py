@@ -143,13 +143,12 @@ def menu_display(package_lookup_table, distance_info):
                 print("Could not retrieve mileage summary:", e)
 
 
-# loads the data and launches menu
+#loads the data and launches menu
 if __name__ == "__main__":
     print(' ** WGUPS DATABASE ** ')
     packages = import_pkg_data()
     distances = load_distance_table()
 
-    # Initial full delivery simulation
-    shipment_workflow.deliver_packages(packages, distances, 'normal')
-
+    # menu display
     menu_display(packages, distances)
+
